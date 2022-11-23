@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: {{ .Release.Name }}-webfrontend-dr
+spec:
+  host: {{ .Release.Name }}-web-frontend
+  subsets:
+      - name: stable
+        labels:
+          {{- include "web-frontend_labels" . | indent 12 }}
+      - name: canary
+        labels:
+          {{- include "web-frontend_labels" . | indent 12 }}
+

@@ -1,0 +1,17 @@
+rolloutSpecs:
+  replicaCount: 1
+  revisionHistoryLimit: 5
+  prometheusServiceAddress: http://prometheus.istio-system.svc.cluster.local:9090
+image:
+ customers:
+   registry: docker.io/6255
+   name: apps
+   tag: customers-8d2e445218e6b3da3d9b076dfa2f731ebeed3848
+ webFrontend:
+   registry: docker.io/6255
+   name: apps
+   tag: web-frontend-f6ebc82983731bf041608fa10cbf85c7bf6c6118
+istio:
+  webFrontendDNS: new-web-frontend.customer-details.com 
+  ingressGatewayLabels:
+    istio: ingressgateway

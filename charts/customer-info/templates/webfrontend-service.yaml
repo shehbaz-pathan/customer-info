@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-web-frontend
+  labels:
+    {{- include "web-frontend_labels" . | indent 4 }}
+spec:
+  selector:
+    {{- include "web-frontend_labels" . | indent 4 }}
+  ports:
+    - port: 80
+      name: http
+      targetPort: 8080

@@ -3,12 +3,12 @@ entries:
   customer-info:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2022-11-23T18:45:34.576695428+05:30"
+    created: "2022-11-23T19:05:42.862375877+05:30"
     description: A Helm chart customer-info webapp
-    digest: d7f863fc60005cde884aed8b45b535d2e7f0a0d484cc6ae637a889319278083c
+    digest: 50b153068a17d61946b7db1103e5203e96cfdd76f6245e5fe3897aff628190ae
     name: customer-info
     type: application
     urls:
     - customer-info-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-23T18:45:34.576122878+05:30"
+generated: "2022-11-23T19:05:42.862058373+05:30"

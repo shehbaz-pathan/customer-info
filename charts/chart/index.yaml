@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  customer-info:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2022-11-23T18:45:34.576695428+05:30"
+    description: A Helm chart customer-info webapp
+    digest: d7f863fc60005cde884aed8b45b535d2e7f0a0d484cc6ae637a889319278083c
+    name: customer-info
+    type: application
+    urls:
+    - customer-info-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-11-23T18:45:34.576122878+05:30"

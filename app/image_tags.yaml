@@ -10,4 +10,4 @@ spec:
         - name: image.webFrontend.tag
           value: web-frontend-c3ede4c3aba3b7e955c5803c5294d628465063e0
         - name: image.customers.tag
-          value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03
+          value: customers-8d2e445218e6b3da3d9b076dfa2f731ebeed3848

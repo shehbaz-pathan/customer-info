@@ -8,6 +8,6 @@ spec:
     helm:
       parameters:
         - name: image.webFrontend.tag
-          value: web-frontend-c289e73ed98a73a8771d5a78759dfc28dcc12fb9
+          value: web-frontend-a804cf25a1645656036aadf588d31eef46eb764e
         - name: image.customers.tag
           value: customers-c289e73ed98a73a8771d5a78759dfc28dcc12fb9

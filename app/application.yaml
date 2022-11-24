@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: customer-info
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: customer-info
+    repoURL: https://shehbaz-pathan.github.io/customer-info/charts/chart/
+    targetRevision: 0.1.0
+    helm:
+      releaseName: customer-info
+      parameters:
+        - name: image.webFrontend.tag
+          value: web-frontend-c3ede4c3aba3b7e955c5803c5294d628465063e0
+        - name: image.customers.tag
+          value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: cs-info
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

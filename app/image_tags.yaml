@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: customer-info
+  namespace: argocd
+spec:
+  source:
+    helm:
+      parameters:
+        - name: image.webFrontend.tag
+          value: web-frontend-c3ede4c3aba3b7e955c5803c5294d628465063e0
+        - name: image.customers.tag
+          value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03

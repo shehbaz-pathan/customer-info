@@ -4,6 +4,12 @@ metadata:
   name: customer-info
   namespace: argocd
 spec:
+  ignoreDifferences:
+  - group: networking.istio.io
+    kind: VirtualService
+    namespace: customers
+    jqPathExpressions:
+     - .spec.http[] |select(.name == "default")
   project: default
   source:
     chart: customer-info
@@ -24,4 +30,5 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
+      - RespectIgnoreDifferences=true
       - CreateNamespace=true

@@ -10,7 +10,7 @@ image:
  webFrontend:
    registry: docker.io/6255
    name: apps
-   tag: web-frontend-ff1ff38b6b97047e34aeb7b6f1b8e8c4bb6a33ac
+   tag: web-frontend-761a829b51493fea23c89f68918af0d2bd074575
 istio:
   webFrontendDNS: new-web-frontend.customer-details.com 
   ingressGatewayLabels:

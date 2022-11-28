@@ -23,7 +23,7 @@ spec:
         - name: image.customers.tag
           value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03
         - name: secrets.NAME
-          value: AgCfcMAKzAHRQbwccHr/Zxg+ARqiOkkB2vuKjPEg6wgLn46JppDEZQhpklavQ5JVL8ZBdH/MGilLceq2dBpVPdMCc2Hb6Vfvio/VPllQrLMKERk+jHuvvIXaKIl3IOx8XvXqHA93qwLBS+lajrRTCXjzpFxzk/L9ZIYEjW3w1ve2tUjWO98D1LQE+V2J2zjoTGO1DorR/m8QbhkhpXr+PkbQFsYjSgU4BtRJ48ETpU7bFXugeaD5uxeRuleiiVfZ0DttomrGQLkgYB9F8yW7aJ6zM0LrcUq/Ph1V6wWWCySXA75TobQLQS2/uQOzv7+WIznjvTSObndbaFeOS2NqrB87/2oiG2AnoIaleekKIMeF+iOZV2/u9BkRvgOhtRjOjMB33oc8uuBzxeKS3PKH1wBw8h1Xu1NN6SH6RZcoOIfwZeNkqTeo3VRkhmsOo/xNF8XFcHeyl1fgQLZkZB0LvZboTG1XbUtAFOw26qymh2S/lqrAyTU+QOz/7M+nyePacKcKEQJvuP5SS7sQ9UjBRSK6lTjZJcRzLp9AyaeUXB4nOvkf56QArJNY1VBnxZJ6ZO8IK/DOvXds7SA+wtcl9ljQd3fZ383lxqWTNvsRIYx6wX0oUNimrvpjOAg29Y3Taw1pZFiWsNPaPxM++fjsIU2h+vUIIyOFo/1sb0Xa12Em2pcLFPy53neIJ2U7WE75njh0FHV0o4Hv 
+          value: AgAHxri8QTTTqVnJ60aa+ZxSXBsZszoUKOXedn7zilrhz/AjoItjIgP/AWcX5E0yecGeOKCYrpfPgvePAeC/VeVflRUOE+prQFAVAbMW2qoXm/4qAsbqqHmIMkGXfUoboJPzgDDUVkX+UFkT0sBz7KA8w9nu8XuamVUHPCTilKmJl8LSY/elgHv6abEw87jzNr1m6BGFj/qaq+nY7P4jgpp6EK5LdbD+DNJIbSW95vjbVLDpr1uoPE2bpvgNHnsAAkMQ0sXNmWA8euONAm5jEtLb/tWDQPU+pIrwIXxVsHLT5VpL42gcjWrrkDdCdkkftut7jhjfvKN/ClO1rhVtsfJ9DBZ1BHXECXrFVoIWJtl2JaykewnsBjioP77URmmS6QCnWC8HpCdu/9/pGPSFunoNlNHSyf/cLKaMxwQmCT/FP795weC4aycCymWpw2JTC2b4haif2z50NKE0JLtNP7S69pNlcBmuE52axk9UG7ebXlQR5aQMtSq6pwZv/u/kIrdjb7zTMYGfMJ5wmfyGKsQ6/LdzprR5aNiTE1+muaAU3jMWOhtUgOPcM7HAxFZYCycKIUq+J5kV+NH+ldB+zNZG0Z/R7FOICl9FqEzoS6jlnRNU9zDHtA4JVsjCW+0H15F6tBAgnHfHVPYjub9lXXjty2H8R2FgzR4sAQEzkHnlOFAbFJzOCnBdzcwrNQBiGUnbzkDhMWNF 
   destination:
     server: "https://kubernetes.default.svc"
     namespace: cs-info

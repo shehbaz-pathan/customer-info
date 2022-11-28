@@ -7,7 +7,7 @@ spec:
   ignoreDifferences:
   - group: networking.istio.io
     kind: VirtualService
-    namespace: customers
+    namespace: cs-info
     jqPathExpressions:
      - .spec.http[] |select(.name == "default")
   project: default

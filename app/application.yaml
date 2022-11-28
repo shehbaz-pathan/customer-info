@@ -14,7 +14,7 @@ spec:
   source:
     chart: customer-info
     repoURL: https://shehbaz-pathan.github.io/customer-info/charts/chart/
-    targetRevision: 0.1.0
+    targetRevision: 0.1.1
     helm:
       releaseName: customer-info
       parameters:
@@ -22,6 +22,8 @@ spec:
           value: web-frontend-c3ede4c3aba3b7e955c5803c5294d628465063e0
         - name: image.customers.tag
           value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03
+        - name: secrets.NAME
+          value: AgCKt7cXv50Se7l659Y+07nbgxYEjA4eWXbWrbNfjzj0wgi6Hzr19OCCtIhoX7Z3F2KTwnfXm+1af0I1O1TV0qdyc797eBqPTm57iFBNXUxXaZ1KOp7DLsqpJZy+VZTJjY911P5eCWCw+FQX5q+Df83CJloasAP35JSCji1Bopl6+NiLYHT7KGfAlJKLLtp/nSxxUnM4CbotYpYGsjiKmHz4zoolbRCozWfrENjWuiyM486q6cAGwLdlSPHo8hEw04oJ5gIm9kv3GhYEBP0g7H320omZFo0H0V9fAGLhoXzuTFQ1awKkYlhBsKmJqF7uxsiw6gLpKu2HXMD4GeOAmTFI2PVYiljPR/cOlzJL5zhlBlz3B/aLnygwkT7IKXsW6yZLl3qCpW+xxtVYHV3LoNIcUy01rElpyBQcfq4/ErcdBeGinfzB2NPd3WfpWqSJoSCokt4Y0UP1Zcxor6E5dP/6Z08v3hSZecmAKXEqXAJDePWmvbYGfAPFfviNQ+G7kpp3R+P7mqonLRbSH9bx3YgnBo30CA0Uh1cEh3QF98Jb5wbxs93dLEkYR9jT8ErF2XkBWsmKrgNHBgxeZSew+jz7WmBx6sXrqKgwh8CIw/PDlVaB0tYoQ2u5xEPnnD3LaoGGUGZ1XQl1JHlbkdPK/WE9e1ZGdeuGFKx25wRZk8AW973GQtXxNWHFo/xAmfSWL7DbGuSVWT+f
   destination:
     server: "https://kubernetes.default.svc"
     namespace: cs-info

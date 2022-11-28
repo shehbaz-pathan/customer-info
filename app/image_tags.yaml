@@ -8,8 +8,8 @@ spec:
     helm:
       parameters:
         - name: image.webFrontend.tag
-          value: web-frontend-a804cf25a1645656036aadf588d31eef46eb764e
+          value: web-frontend-765eee64701a968ea544a4977cedac9b56e61b01
         - name: image.customers.tag
           value: customers-c289e73ed98a73a8771d5a78759dfc28dcc12fb9
         - name: secrets.NAME
-          value: AgAHxri8QTTTqVnJ60aa+ZxSXBsZszoUKOXedn7zilrhz/AjoItjIgP/AWcX5E0yecGeOKCYrpfPgvePAeC/VeVflRUOE+prQFAVAbMW2qoXm/4qAsbqqHmIMkGXfUoboJPzgDDUVkX+UFkT0sBz7KA8w9nu8XuamVUHPCTilKmJl8LSY/elgHv6abEw87jzNr1m6BGFj/qaq+nY7P4jgpp6EK5LdbD+DNJIbSW95vjbVLDpr1uoPE2bpvgNHnsAAkMQ0sXNmWA8euONAm5jEtLb/tWDQPU+pIrwIXxVsHLT5VpL42gcjWrrkDdCdkkftut7jhjfvKN/ClO1rhVtsfJ9DBZ1BHXECXrFVoIWJtl2JaykewnsBjioP77URmmS6QCnWC8HpCdu/9/pGPSFunoNlNHSyf/cLKaMxwQmCT/FP795weC4aycCymWpw2JTC2b4haif2z50NKE0JLtNP7S69pNlcBmuE52axk9UG7ebXlQR5aQMtSq6pwZv/u/kIrdjb7zTMYGfMJ5wmfyGKsQ6/LdzprR5aNiTE1+muaAU3jMWOhtUgOPcM7HAxFZYCycKIUq+J5kV+NH+ldB+zNZG0Z/R7FOICl9FqEzoS6jlnRNU9zDHtA4JVsjCW+0H15F6tBAgnHfHVPYjub9lXXjty2H8R2FgzR4sAQEzkHnlOFAbFJzOCnBdzcwrNQBiGUnbzkDhMWNF 
+          value: AgAHxri8QTTTqVnJ60aa+ZxSXBsZszoUKOXedn7zilrhz/AjoItjIgP/AWcX5E0yecGeOKCYrpfPgvePAeC/VeVflRUOE+prQFAVAbMW2qoXm/4qAsbqqHmIMkGXfUoboJPzgDDUVkX+UFkT0sBz7KA8w9nu8XuamVUHPCTilKmJl8LSY/elgHv6abEw87jzNr1m6BGFj/qaq+nY7P4jgpp6EK5LdbD+DNJIbSW95vjbVLDpr1uoPE2bpvgNHnsAAkMQ0sXNmWA8euONAm5jEtLb/tWDQPU+pIrwIXxVsHLT5VpL42gcjWrrkDdCdkkftut7jhjfvKN/ClO1rhVtsfJ9DBZ1BHXECXrFVoIWJtl2JaykewnsBjioP77URmmS6QCnWC8HpCdu/9/pGPSFunoNlNHSyf/cLKaMxwQmCT/FP795weC4aycCymWpw2JTC2b4haif2z50NKE0JLtNP7S69pNlcBmuE52axk9UG7ebXlQR5aQMtSq6pwZv/u/kIrdjb7zTMYGfMJ5wmfyGKsQ6/LdzprR5aNiTE1+muaAU3jMWOhtUgOPcM7HAxFZYCycKIUq+J5kV+NH+ldB+zNZG0Z/R7FOICl9FqEzoS6jlnRNU9zDHtA4JVsjCW+0H15F6tBAgnHfHVPYjub9lXXjty2H8R2FgzR4sAQEzkHnlOFAbFJzOCnBdzcwrNQBiGUnbzkDhMWNF

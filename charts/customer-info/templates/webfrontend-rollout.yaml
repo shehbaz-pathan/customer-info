@@ -25,6 +25,8 @@ spec:
           env:
             - name: CUSTOMER_SERVICE_URL
               value: "http://{{ .Release.Name }}-customers.{{ .Release.Namespace}}.svc.cluster.local"
+            - name: NAME
+              value: {{ .Values.displayName }}
   strategy:
     canary:
       #      canaryService: customers-canary

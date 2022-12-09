@@ -12,7 +12,7 @@ spec:
             - name: image.webFrontend.tag
               value: web-frontend-fb9ebf8be977782254f4000a62806512f287158e
             - name: image.customers.tag
-              value: customers-c289e73ed98a73a8771d5a78759dfc28dcc12fb9
+              value: customers-fb9ebf8be977782254f4000a62806512f287158e
             - name: istio.webFrontendDNS
               value: '{{values.clusterName}}-web-frontend.customer-details.com'
             - name: displayName

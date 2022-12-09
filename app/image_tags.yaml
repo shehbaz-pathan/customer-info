@@ -15,3 +15,5 @@ spec:
               value: customers-c289e73ed98a73a8771d5a78759dfc28dcc12fb9
             - name: istio.webFrontendDNS
               value: '{{values.clusterName}}-web-frontend.customer-details.com' 
+            - name: displayName
+              value: '{{name}} cluster'

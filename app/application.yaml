@@ -33,6 +33,8 @@ spec:
               value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03 
             - name: istio.webFrontendDNS
               value: '{{values.clusterName}}-web-frontend.customer-details.com'
+            - name: displayName
+              value: '{{name}} cluster'
         destination:
           server: "{{ server }}"
           namespace: cs-info

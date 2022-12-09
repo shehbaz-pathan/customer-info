@@ -1,36 +1,47 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: ApplicationSet
 metadata:
-  name: customer-info
-  namespace: argocd
+  name: guestbook
 spec:
-  ignoreDifferences:
-  - group: networking.istio.io
-    kind: VirtualService
-    namespace: cs-info
-    jqPathExpressions:
-     - .spec.http[] |select(.name == "default")
-  project: default
-  source:
-    chart: customer-info
-    repoURL: https://shehbaz-pathan.github.io/customer-info/charts/chart/
-    targetRevision: 0.1.1
-    helm:
-      releaseName: customer-info
-      parameters:
-        - name: image.webFrontend.tag
-          value: web-frontend-c3ede4c3aba3b7e955c5803c5294d628465063e0
-        - name: image.customers.tag
-          value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03
-        - name: secrets.NAME
-          value: AgAHxri8QTTTqVnJ60aa+ZxSXBsZszoUKOXedn7zilrhz/AjoItjIgP/AWcX5E0yecGeOKCYrpfPgvePAeC/VeVflRUOE+prQFAVAbMW2qoXm/4qAsbqqHmIMkGXfUoboJPzgDDUVkX+UFkT0sBz7KA8w9nu8XuamVUHPCTilKmJl8LSY/elgHv6abEw87jzNr1m6BGFj/qaq+nY7P4jgpp6EK5LdbD+DNJIbSW95vjbVLDpr1uoPE2bpvgNHnsAAkMQ0sXNmWA8euONAm5jEtLb/tWDQPU+pIrwIXxVsHLT5VpL42gcjWrrkDdCdkkftut7jhjfvKN/ClO1rhVtsfJ9DBZ1BHXECXrFVoIWJtl2JaykewnsBjioP77URmmS6QCnWC8HpCdu/9/pGPSFunoNlNHSyf/cLKaMxwQmCT/FP795weC4aycCymWpw2JTC2b4haif2z50NKE0JLtNP7S69pNlcBmuE52axk9UG7ebXlQR5aQMtSq6pwZv/u/kIrdjb7zTMYGfMJ5wmfyGKsQ6/LdzprR5aNiTE1+muaAU3jMWOhtUgOPcM7HAxFZYCycKIUq+J5kV+NH+ldB+zNZG0Z/R7FOICl9FqEzoS6jlnRNU9zDHtA4JVsjCW+0H15F6tBAgnHfHVPYjub9lXXjty2H8R2FgzR4sAQEzkHnlOFAbFJzOCnBdzcwrNQBiGUnbzkDhMWNF 
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: cs-info
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - RespectIgnoreDifferences=true
-      - CreateNamespace=true
+  generators: 
+    - list:
+        elements:
+          - namespace: cs-info
+    - cluster: {}
+  template:
+     metadata:
+       name: "customer-info-{{ name }}"
+       namespace: argocd
+     spec:
+        ignoreDifferences:
+         - group: networking.istio.io
+           kind: VirtualService
+           namespace: cs-info
+           jqPathExpressions:
+             - .spec.http[] |select(.name == "default")
+        project: default
+        source:
+          chart: customer-info
+          repoURL: https://shehbaz-pathan.github.io/customer-info/charts/chart/
+          targetRevision: 0.1.1
+          helm:
+          releaseName: customer-info
+          parameters:
+            - name: image.webFrontend.tag
+              value: web-frontend-c3ede4c3aba3b7e955c5803c5294d628465063e0
+            - name: image.customers.tag
+              value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03
+            - name: secrets.NAME
+              value: AgAHxri8QTTTqVnJ60aa+ZxSXBsZszoUKOXedn7zilrhz/AjoItjIgP/AWcX5E0yecGeOKCYrpfPgvePAeC/VeVflRUOE+prQFAVAbMW2qoXm/4qAsbqqHmIMkGXfUoboJPzgDDUVkX+UFkT0sBz7KA8w9nu8XuamVUHPCTilKmJl8LSY/elgHv6abEw87jzNr1m6BGFj/qaq+nY7P4jgpp6EK5LdbD+DNJIbSW95vjbVLDpr1uoPE2bpvgNHnsAAkMQ0sXNmWA8euONAm5jEtLb/tWDQPU+pIrwIXxVsHLT5VpL42gcjWrrkDdCdkkftut7jhjfvKN/ClO1rhVtsfJ9DBZ1BHXECXrFVoIWJtl2JaykewnsBjioP77URmmS6QCnWC8HpCdu/9/pGPSFunoNlNHSyf/cLKaMxwQmCT/FP795weC4aycCymWpw2JTC2b4haif2z50NKE0JLtNP7S69pNlcBmuE52axk9UG7ebXlQR5aQMtSq6pwZv/u/kIrdjb7zTMYGfMJ5wmfyGKsQ6/LdzprR5aNiTE1+muaAU3jMWOhtUgOPcM7HAxFZYCycKIUq+J5kV+NH+ldB+zNZG0Z/R7FOICl9FqEzoS6jlnRNU9zDHtA4JVsjCW+0H15F6tBAgnHfHVPYjub9lXXjty2H8R2FgzR4sAQEzkHnlOFAbFJzOCnBdzcwrNQBiGUnbzkDhMWNF
+            - name: istio.webFrontendDNS
+              value: "{{ name }}-web-frontend.customer-details.com"
+        destination:
+          server: "{{ server }}"
+          namespace: "{{ namespace }}"
+        syncPolicy:
+          automated:
+            prune: true
+            selfHeal: true
+          syncOptions:
+            - RespectIgnoreDifferences=true
+            - CreateNamespace=true

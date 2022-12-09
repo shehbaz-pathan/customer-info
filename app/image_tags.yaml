@@ -4,16 +4,16 @@ metadata:
   name: customer-info-applications
   namespace: argocd
 spec:
- template:
+  template:
     spec:
       source:
         helm:
           parameters:
             - name: image.webFrontend.tag
-              value: web-frontend-a5f491a9af19b88d12a358a942cadcecfc7511ab
+              value: web-frontend-fb9ebf8be977782254f4000a62806512f287158e
             - name: image.customers.tag
               value: customers-c289e73ed98a73a8771d5a78759dfc28dcc12fb9
             - name: istio.webFrontendDNS
-              value: '{{values.clusterName}}-web-frontend.customer-details.com' 
+              value: '{{values.clusterName}}-web-frontend.customer-details.com'
             - name: displayName
               value: '{{name}} cluster'

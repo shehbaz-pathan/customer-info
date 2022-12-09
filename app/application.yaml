@@ -5,7 +5,9 @@ metadata:
   namespace: argocd
 spec:
   generators: 
-    - clusters: {}
+    - clusters:
+         values:
+            clusterName: '{{name}}'
   template:
      metadata:
        name: "customer-info-{{ name }}"
@@ -30,7 +32,7 @@ spec:
             - name: image.customers.tag
               value: customers-e9946189bf10f3d3c19cc1a7dcb71f182ce27c03 
             - name: istio.webFrontendDNS
-              value: "{{ name }}-web-frontend.customer-details.com"
+              value: '{{values.clusterName}}-web-frontend.customer-details.com'
         destination:
           server: "{{ server }}"
           namespace: cs-info

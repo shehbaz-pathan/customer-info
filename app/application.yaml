@@ -8,7 +8,7 @@ spec:
     - list:
         elements:
           - namespace: cs-info
-    - cluster: {}
+    - clusters: {}
   template:
      metadata:
        name: "customer-info-{{ name }}"
@@ -26,8 +26,8 @@ spec:
           repoURL: https://shehbaz-pathan.github.io/customer-info/charts/chart/
           targetRevision: 0.1.1
           helm:
-          releaseName: customer-info
-          parameters:
+           releaseName: customer-info
+           parameters:
             - name: image.webFrontend.tag
               value: web-frontend-c3ede4c3aba3b7e955c5803c5294d628465063e0
             - name: image.customers.tag

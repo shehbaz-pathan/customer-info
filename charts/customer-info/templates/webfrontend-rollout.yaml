@@ -25,11 +25,6 @@ spec:
           env:
             - name: CUSTOMER_SERVICE_URL
               value: "http://{{ .Release.Name }}-customers.{{ .Release.Namespace}}.svc.cluster.local"
-            - name: NAME
-              valueFrom:
-                secretKeyRef:
-                   name: {{ .Release.Name }}-secret
-                   key: NAME
   strategy:
     canary:
       #      canaryService: customers-canary

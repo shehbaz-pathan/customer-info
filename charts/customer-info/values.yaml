@@ -14,4 +14,5 @@ image:
 istio:
   webFrontendDNS: new-web-frontend.customer-details.com 
   ingressGatewayLabels:
-    istio: ingressgateway 
+    istio: ingressgateway
+displayName: InfraCloud

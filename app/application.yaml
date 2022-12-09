@@ -5,9 +5,6 @@ metadata:
   namespace: argocd
 spec:
   generators: 
-    - list:
-        elements:
-          - namespace: cs-info
     - clusters: {}
   template:
      metadata:
@@ -38,7 +35,7 @@ spec:
               value: "{{ name }}-web-frontend.customer-details.com"
         destination:
           server: "{{ server }}"
-          namespace: "{{ namespace }}"
+          namespace: cs-info
         syncPolicy:
           automated:
             prune: true

@@ -10,7 +10,7 @@ spec:
         helm:
           parameters:
             - name: image.webFrontend.tag
-              value: web-frontend-67da6f4ace8a5c11704ed4b12f9f0d21a81f6fd6
+              value: web-frontend-4bb403eae7867713c85d36c18df2b7c4af157827
             - name: image.customers.tag
               value: customers-fb9ebf8be977782254f4000a62806512f287158e
             - name: istio.webFrontendDNS
